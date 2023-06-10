@@ -1,15 +1,10 @@
-# api-with-python
-Create API REST with Python Flask
-
-### Como usar?
-
 <div align="center">
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.png" style="
 width: 250px;">
 
 # Api With Flask
 
-#### Projeto feito em Python Flask
+#### API feita com Python e Flask e MYSQL.
 </div>
 
 ---
@@ -30,36 +25,19 @@ width: 250px;">
 
 ### 1. Tenha os itens e ambientes necessários
 
-#### 1.1 Linguagens e Aplicações:
-###### 1.1.1 Git
-Link de download:
-https://git-scm.com/downloads
-###### 1.1.2 Python v3.6+
-Download:
-https://www.python.org/downloads/
-###### 1.1.3 Postman (ou similar)
-Link de download:
-https://www.postman.com/downloads/
-
-###### 1.1.4 Visual Studio Code (ou similar)
-Link de download:
-https://code.visualstudio.com/download
-
-#### 1.2 Banco de dados:
-###### 1.2.1 MySQL workbench v8.0+
-Link de download:
-https://dev.mysql.com/downloads/workbench/
+- Git: [Download](https://git-scm.com/downloads)
+- Python 3.6+ : [Download](https://www.python.org/downloads/)
+- Postman (ou um software similar): [Download](https://www.postman.com/downloads/)
+- Visual Studio Code (ou um editor de código similar): [Download](https://code.visualstudio.com/download)
+- MySQL Workbench v8.0+ : [Download](https://dev.mysql.com/downloads/workbench/)
 
 ---
 #### 2. Criando o Banco de Dados:
 
-Após instalar e configurar inicialmente o MySQL Workbench, na tela inicial será necessário criar um servidor, no botão "+" ao lado de MySQL connections
+Após instalar e configurar o MySQL Workbench, crie um servidor clicando no botão "+" ao lado de "MySQL Connections" na tela inicial. 
+Preencha o campo "Connection Name" e clique em "Ok".
 
-Preencha o campo "Connection Name" e clique em "Ok" e clique nesse servidor criado.
-
-Após isso, perceba uma barra superior com icones e clique em "Create new schema in connection server." para criar um schema
-
-E finalize a criação do schema.
+Em seguida, selecione o servidor que você criou e, na barra superior de ícones, clique em "Create new schema in connection server" para criar um schema no banco de dados.
 
 ---
 #### 3. Clone esse repositório e acesse:
@@ -100,12 +78,13 @@ Caso esteja usando outro editor, basta importar o diretorio/repositorio local pa
 Acesse o arquivo "main.py" dentro da pasta "src"
 E substitua todos as linhas os.getenv("") para os dados necessários para estabelecer a conexão, ficando assim aproxidamente:
 
-connection = pymysql.connect(
+```connection = pymysql.connect(
     host = root,
     user = "meuNomeDeUsuário",
     password = "minhaSenha",
     database = "nomeDoMeuSchema",
     )
+```
 
 certifique de todos os dados substituidos estarem certos e entre aspas.
 
