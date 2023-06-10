@@ -94,6 +94,7 @@ Isso abrirá o repositorio automaticamente dentro do Visual Studio Code
 
 Caso esteja usando outro editor, basta importar o diretorio/repositorio local para dentro do editor.
 
+---
 #### 6. Conecte o banco de dados ao software
 
 Acesse o arquivo "main.py" dentro da pasta "src"
@@ -108,6 +109,7 @@ connection = pymysql.connect(
 
 certifique de todos os dados substituidos estarem certos e entre aspas.
 
+---
 #### 7. Execute o arquivo main.py
 
 Basta clicar F8 em seu teclado ou clicar no botão de "play" no canto superior direito caso esteja no Visual Studio Code.
