@@ -24,8 +24,6 @@ app.config['JSON_SORT_KEYS'] = False
 
 # ============ CREATE TABLE =========================================== #
 def create_table():
-    cursor = connection.cursor()
-
     sql = '''
     CREATE TABLE IF NOT EXISTS users (
     id      INT PRIMARY KEY NOT NULL AUTO_INCREMENT,

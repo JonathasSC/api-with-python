@@ -3,17 +3,6 @@ Create API REST with Python Flask
 
 ### Como usar?
 
-1. Crie uma virtual env e ative-a 
-2. Rode pip install -r requirements.txt 
-3. Substitua os.getenv("") por sua senha,user ,host e db
-4. Rode arquivo main.py
-
-para testar use: 
-Postman
-
-Configure o header como:
-"Content-Type", 'application/json"
-
 <div align="center">
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.png" style="
 width: 250px;">
@@ -30,7 +19,7 @@ width: 250px;">
 
 ### Ferramentas utilizadas
 
-![vscode](https://img.shields.io/badge/VS%20CODE-0078d7?&logo=visualstudiocode&logoColor=white&style=flat&logoWidth=30) ![mysql](https://img.shields.io/badge/MYSQL_WORKBENCH-1E4C68?&logo=mysql&logoColor=white&style=flat&logoWidth=30) ![postman](https://img.shields.io/badge/POSTMAN-black?&logo=postman&logoColor=white&style=flat&logoWidth=30)
+![vscode](https://img.shields.io/badge/VS%20CODE-0078d7?&logo=visualstudiocode&logoColor=white&style=flat&logoWidth=30) ![mysql](https://img.shields.io/badge/MYSQL_WORKBENCH-1E4C68?&logo=mysql&logoColor=white&style=flat&logoWidth=30) ![postman](https://img.shields.io/badge/POSTMAN-orange?&logo=postman&logoColor=white&style=flat&logoWidth=30)
 
 ---
 
@@ -62,7 +51,18 @@ Link de download:
 https://dev.mysql.com/downloads/workbench/
 
 ---
-#### 2. Clone esse repositório e acesse:
+#### 2. Criando o Banco de Dados:
+
+Após instalar e configurar inicialmente o MySQL Workbench, na tela inicial será necessário criar um servidor, no botão "+" ao lado de MySQL connections
+
+Preencha o campo "Connection Name" e clique em "Ok" e clique nesse servidor criado.
+
+Após isso, perceba uma barra superior com icones e clique em "Create new schema in connection server." para criar um schema
+
+E finalize a criação do schema.
+
+---
+#### 3. Clone esse repositório e acesse:
 
 Dentro de uma pasta, abra um terminal ou bash, e digite:
 
@@ -73,7 +73,7 @@ depois
 ``` cd api-with-python ```
 
 ---
-#### 3. Crie um ambiente virtual e instale os pacotes necessários:
+#### 4. Crie um ambiente virtual e instale os pacotes necessários:
 
 Ainda com o terminal ou bash, execute essa sequencia:
 
@@ -84,7 +84,7 @@ Ainda com o terminal ou bash, execute essa sequencia:
 ``` pip install -r requirements.txt ``` 
 
 ---
-#### 4. Abra o repositorio em um editor de código.
+#### 5. Abra o repositorio em um editor de código.
 
 Caso você esteja utilizando o visual studio code, ainda no terminal/bash você pode dar o seguinte comando:
 
@@ -92,4 +92,27 @@ Caso você esteja utilizando o visual studio code, ainda no terminal/bash você 
 
 Isso abrirá o repositorio automaticamente dentro do Visual Studio Code 
 
-#### 5. Configure 
+Caso esteja usando outro editor, basta importar o diretorio/repositorio local para dentro do editor.
+
+#### 6. Conecte o banco de dados ao software
+
+Acesse o arquivo "main.py" dentro da pasta "src"
+E substitua todos as linhas os.getenv("") para os dados necessários para estabelecer a conexão, ficando assim aproxidamente:
+
+connection = pymysql.connect(
+    host = root,
+    user = "meuNomeDeUsuário",
+    password = "minhaSenha",
+    database = "nomeDoMeuSchema",
+    )
+
+certifique de todos os dados substituidos estarem certos e entre aspas.
+
+#### 7. Execute o arquivo main.py
+
+Basta clicar F8 em seu teclado ou clicar no botão de "play" no canto superior direito caso esteja no Visual Studio Code.
+
+Se tudo estiver correto, sua API estára no ar e basta testar usando o POSTMAN ou Serviços similares.
+
+OBS: Configure o header como:
+"Content-Type", 'application/json" dentro do Postman.
