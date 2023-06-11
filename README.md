@@ -2,9 +2,9 @@
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.png" style="
 width: 250px;">
 
-# Api With Flask
+# API RESTful With Flask
 
-#### API feita com Python e Flask e MYSQL.
+#### API Restful feita com Python, Flask e MYSQL.
 </div>
 
 ---
